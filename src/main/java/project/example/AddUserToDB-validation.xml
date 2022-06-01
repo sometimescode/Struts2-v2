@@ -1,0 +1,28 @@
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+    "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+  <validator type="requiredstring">
+    <param name="fieldName">accountBean.username</param>
+    <message>Username is required.</message>
+  </validator>
+  <validator type="requiredstring">
+    <param name="fieldName">accountBean.password</param>
+    <message>Password is required.</message>
+  </validator>
+  <validator type="requiredstring">
+    <param name="fieldName">accountBean.firstName</param>
+    <message>First name is required.</message>
+  </validator>
+  <validator type="requiredstring">
+    <param name="fieldName">accountBean.lastName</param>
+    <message>Last name is required.</message>
+  </validator>
+  <validator type="requiredstring">
+    <param name="fieldName">accountBean.email</param>
+    <message>Email address is required.</message>
+  </validator>
+  <validator type="email">
+    <param name="fieldName">accountBean.email</param>
+    <message>Email address not valid.</message>
+  </validator>
+</validators>
