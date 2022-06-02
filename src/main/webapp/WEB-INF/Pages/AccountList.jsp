@@ -25,6 +25,10 @@
       #verticalList li span {
         padding: 10px;
       }
+
+      #verticalList li.errorPink {
+        background-color: lightpink;
+      }
       
     </style>    
   </head>
@@ -45,7 +49,10 @@
       </header>
       <div>
         <ul id="verticalList">
-          <s:if test='%{accounts.isEmpty() == true}'>
+          <s:if test="error != null">
+            <li class="center errorPink"><s:property value="error"/></li>
+          </s:if>
+          <s:if test="error == null && accounts.isEmpty() == true">
             <li class="center">No users found.</li>
           </s:if>
           <s:iterator  value="accounts">  
